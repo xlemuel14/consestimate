@@ -15,7 +15,7 @@
 			link: function(scope, element) {
 				var listener = function(event, toState, toParams, fromState, fromParams) {
 					var title = 'Seed Project';
-					if (toState.data && toState.data.pageTitle) title = 'Angular Seed | ' + toState.data.pageTitle;
+					if (toState.data && toState.data.pageTitle) title = 'Construction Estimate | ' + toState.data.pageTitle;
 					$timeout(function() {
 						element.text(title);
 					});
