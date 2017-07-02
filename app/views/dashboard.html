@@ -1,0 +1,151 @@
+<!-- Wrapper-->
+<div id="wrapper">
+
+<!-- Navigation -->
+<div ng-include="'app/views/common/navigation.html'"></div>
+
+<!-- Page wraper -->
+<div id="page-wrapper" class="gray-bg {{$state.current.name}}">
+
+<!-- Page wrapper -->
+<div ng-include="'app/views/common/topnavbar.html'"></div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+	<div class="text-center" style="padding: 60px 0 40px 0">
+		<h1 class="logo-text-login-below">Concreting</h1>
+		<h2 style="margin-top: -0.5%">Works</h2>
+	</div>
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="ibox float-e-margins">
+				<div class="ibox-title">
+					<h5>FOOTING</h5>
+				</div>
+				<div class="ibox-content">
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="length">Length</label>
+							<div class="col-sm-10">
+								<input type="number" class="form-control" id="length" placeholder="Enter length (M)" ng-model="footing.length" ng-change="footingValuesChanged()">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="width">Width</label>
+							<div class="col-sm-10"> 
+								<input type="number" class="form-control" id="width" placeholder="Enter width (M)" ng-model="footing.width" ng-change="footingValuesChanged()">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="thickness">Thickness</label>
+							<div class="col-sm-10"> 
+								<input type="number" class="form-control" id="thickness" placeholder="Enter thickness (M)" ng-model="footing.thickness" ng-change="footingValuesChanged()">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-6" for="volume">Total Volume of Concrete:</label>
+							<div class="col-sm-6"> 
+								<input type="number" class="form-control" id="volume" readonly ng-model="footing.volume">
+							</div>
+						</div>
+						<hr></hr>
+						<div class="form-group">
+							<label class="control-label col-sm-4" for="footing">Number of Footing</label>
+							<div class="col-sm-8"> 
+								<input type="number" class="form-control" id="footing" placeholder="Enter # of footing" ng-model="footing.quantity" ng-change="footingValuesChanged()">
+							</div>
+						</div>
+					</form>
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1">
+							<table class="table table-hover no-margins">
+								<tbody>
+								<tr>
+									<td><b>Total Volume of Concrete</b></td>
+									<td>{{footing.byUnit.volume}} <span ng-if="footing.byUnit.volume">Cubic Meter</span></td>
+								</tr>
+								<tr>
+									<td><b>Number of Cement</b></td>
+									<td>{{footing.byUnit.cementNumber}} <span ng-if="footing.byUnit.cementNumber">Bags</span></td>
+								</tr>
+								<tr>
+									<td><b>Volume of Sand</b></td>
+									<td>{{footing.byUnit.sandNumber}} <span ng-if="footing.byUnit.sandNumber">Cubic Meter</span></td>
+								</tr>
+								<tr>
+									<td><b>Volume of 3/4" Gravel</b></td>
+									<td>{{footing.byUnit.gravelNumber}} <span ng-if="footing.byUnit.gravelNumber">Cubic Meter</span></td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="ibox float-e-margins">
+				<div class="ibox-title">
+					<h5>WALL FOOTING</h5>
+				</div>
+				<div class="ibox-content">
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="length">Length</label>
+							<div class="col-sm-10">
+								<input type="number" class="form-control" id="length" placeholder="Enter length (M)" ng-model="wlFooting.length" ng-change="wlFootingValuesChanged()">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="width">Width</label>
+							<div class="col-sm-10"> 
+								<input type="number" class="form-control" id="width" placeholder="Enter width (M)" ng-model="wlFooting.width" ng-change="wlFootingValuesChanged()">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="thickness">Thickness</label>
+							<div class="col-sm-10"> 
+								<input type="number" class="form-control" id="thickness" placeholder="Enter thickness (M)" ng-model="wlFooting.thickness" ng-change="wlFootingValuesChanged()">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-6" for="volume">Total Volume of Concrete:</label>
+							<div class="col-sm-6"> 
+								<input type="number" class="form-control" id="volume" readonly ng-model="wlFooting.volume">
+							</div>
+						</div>
+					</form>
+					<div class="row">
+						<br>
+						<div class="col-md-10 col-md-offset-1">
+							<table class="table table-hover no-margins">
+								<tbody>
+								<tr>
+									<td><b>Number of Cement</b></td>
+									<td>{{wlFooting.cementNumber}} <span ng-if="wlFooting.cementNumber">Bags</span></td>
+								</tr>
+								<tr>
+									<td><b>Volume of Sand</b></td>
+									<td>{{wlFooting.sandNumber}} <span ng-if="wlFooting.sandNumber">Cubic Meter</span></td>
+								</tr>
+								<tr>
+									<td><b>Volume of 3/4" Gravel</b></td>
+									<td>{{wlFooting.gravelNumber}} <span ng-if="wlFooting.gravelNumber">Cubic Meter</span></td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Footer -->
+<div ng-include="'app/views/common/footer.html'"></div>
+
+</div>
+<!-- End page wrapper-->
+
+</div>
+<!-- End wrapper-->

@@ -1,0 +1,101 @@
+<!--
+ *  System		: Asset Tagging
+ *  Developer	: Lemuel Castro
+ *  Created		: March 30, 2017
+-->
+
+<!DOCTYPE html>
+<html ng-app="angularseed">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Page title set in pageTitle directive -->
+    <title page-title></title>
+
+    <!-- Font awesome -->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="assets/font-awesome/css/font-awesome-animation.min.css" rel="stylesheet">
+
+    <!-- Bootstrap and Fonts -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- Datatables CSS -->
+	<link href="assets/css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+	
+	<!-- Toaster CSS -->
+	<link href="assets/css/plugins/toastr/toastr.min.css" rel="stylesheet">
+	
+	<!-- Odometer CSS -->
+	<link href="assets/css/plugins/odometer/odometer-theme-custom.css" rel="stylesheet">
+
+    <!-- Main Inspinia CSS files -->
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link id="loadBefore" href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<!-- Main controller -->
+<body ng-controller="mainCtrl" class="{{$state.current.data.specialClass}}" landing-scrollspy id="page-top">
+
+<!-- Main view  -->
+<div ui-view></div>
+
+<!-- Toaster Container Directive -->
+<toaster-container toaster-options="{'position-class': 'toast-top-right'}"></toaster-container>
+
+<!-- jQuery and Bootstrap -->
+<script src="assets/js/jquery/jquery-2.1.1.min.js"></script>
+<script src="assets/js/plugins/jquery-ui/jquery-ui.js"></script>
+<script src="assets/js/bootstrap/bootstrap.min.js"></script>
+
+<!-- MetsiMenu -->
+<script src="assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+<!-- SlimScroll -->
+<script src="assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Peace JS -->
+<script src="assets/js/plugins/pace/pace.min.js"></script>
+
+<!-- Datatables JS -->
+<script src="assets/js/plugins/dataTables/datatables.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="assets/js/inspinia.js"></script>
+
+<!-- Main Angular scripts-->
+<script src="assets/js/angular/angular.min.js"></script>
+<script src="assets/js/angular/angular-cookies.min.js"></script>
+<script src="assets/js/angular/angular-animate.min.js"></script>
+<script src="assets/js/plugins/oclazyload/dist/ocLazyLoad.min.js"></script>
+<script src="assets/js/ui-router/angular-ui-router.min.js"></script>
+<script src="assets/js/bootstrap/ui-bootstrap-tpls-1.1.2.min.js"></script>
+
+<!-- Angular Datatables -->
+<script src="assets/js/plugins/dataTables/angular-datatables.min.js"></script>
+<script src="assets/js/plugins/dataTables/angular-datatables.buttons.min.js"></script>
+
+<!-- Toaster JS -->
+<script src="assets/js/plugins/toastr/toaster.min.js"></script>
+
+<!-- Angular Odometer JS -->
+<script src="assets/js/plugins/odometer/angular-odometer.js"></script>
+<script src="assets/js/plugins/odometer/odometer.js"></script>
+
+<!-- Bootbox JS -->
+<script src="assets/js/plugins/bootbox/bootbox.min.js"></script>
+
+<!-- Anglar App Script -->
+<script src="app/app.js"></script>
+<script src="app/config.js"></script>
+<script src="app/directives/directives.js"></script>
+<script src="app/services/services.js"></script>
+<script src="app/controllers/mainCtrl.js"></script>
+<script src="app/controllers/homeCtrl.js"></script>
+
+</body>
+</html>

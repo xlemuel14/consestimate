@@ -1,0 +1,15 @@
+<div class="footer">
+    <div class="pull-right">
+		<span class="footerClock" ng-show="!showClock">
+			Designed by <strong>Lemuel Castro</strong>			
+			<a class="ibox-right-btn" ng-click="showClock=true"><li class="fa fa-angle-double-left"></li></a>
+		</span>
+		<span class="footerClock" ng-show="showClock">
+			<strong>{{clock | date:'medium'}}</strong>  
+			<a class="ibox-right-btn" ng-show="showClock" ng-click="showClock=false"><li class="fa fa-angle-double-right"></li></a>		
+		</span>	
+    </div>
+    <div>
+        <strong>Your Company &copy;</strong>
+    </div>
+</div>
